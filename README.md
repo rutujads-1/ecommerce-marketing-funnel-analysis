@@ -17,6 +17,8 @@ Analyzed e-commerce marketing performance using session-level data to evaluate a
 
 6. Assumptions and Caveats
 
+7. Appendix Summary 
+
 
 
 # Background and Overview
@@ -36,9 +38,11 @@ Insights and recommendations are developed in the following areas-
 
 **2. Acquisition Channel Performance:** assesses how different marketing channels contribute to volume and efficiency using *sessions, orders, and revenue by channel,conversion rate by channel and revenue per session by channel*.
 
-**3. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand traffic through the conversion funnel, with a focus on identifying differences in intent, efficiency, and friction across key funnel stages. This analysis uses both outcome metrics and funnel diagnostics, including- *brand and nonbrand funnel conversion rates,conversion rate gap (percentage points) between brand and nonbrand traffic,funnel entry rates and stage-level drop-offs and checkout completion rates*.
+**3. Campaign Performance:**  Compares campaign performance within a channel using _sessions, orders, conversion rate, RPS, and gross revenue_ to highlight what is working best.
 
-**4. Unpaid Channel Funnel Health(organic and direct):** Evaluates funnel performance for Direct and Organic traffic analysing  funnel behavior across both channels  using *funnel conversion rates for direct and organic traffic, conversion rate gap (percentage points) between direct and organic channels, stage-level funnel drop-off percentages and checkout completion rates*.
+**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand traffic through the conversion funnel, with a focus on identifying differences in intent, efficiency, and friction across key funnel stages. This analysis uses both outcome metrics and funnel diagnostics, including- *brand and nonbrand funnel conversion rates,conversion rate gap (percentage points) between brand and nonbrand traffic,funnel entry rates and stage-level drop-offs and checkout completion rates*.
+
+**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic analysing  funnel behavior across both channels  using *funnel conversion rates for direct and organic traffic, conversion rate gap (percentage points) between direct and organic channels, stage-level funnel drop-off percentages and checkout completion rates*.
 
 link for dashboard:
 
@@ -50,6 +54,11 @@ link for sql query:
 
 
 # Data Structure and Overview 
+
+<p align="center">
+  <img src="ERD.png" alt="ERD" width="800">
+</p>
+
 
 # Executive Summary
 
@@ -221,15 +230,30 @@ Recommendation:
 2. Test controlled increases in exposure for high-efficiency ad variants to assess scalability without compromising ROI.
 
 
-4. Funnel Stage Optimisation
+**4. Optimize Checkout Completion for Non-Brand Traffic**
 
-   
+Funnel analysis shows that Non-Brand Paid traffic, which contributes the majority of Paid Search sessions and revenue, experiences a significant drop-off at the shipping-to-purchase stage(50.39%). This drop-off occurs late in the funnel, after users have demonstrated strong purchase intent, indicating that checkout friction—rather than acquisition quality—is limiting revenue conversion.
+
+Recommendation:
+
+1. Optimize checkout performance across devices, particularly mobile, where late-funnel friction may be amplified.
+
+2. Test trust and reassurance elements (e.g., delivery timelines, return policies, security indicators) at the shipping and payment stages.
+
+**Estimated Impact**
+
+Applying a conservative benchmark-based scenario—improving checkout completion for Non-Brand traffic from ~49.6% to 55% while holding traffic and average order value constant—suggests a potential ~10–11% increase in Non-Brand revenue. 
+
+Based on observed Non-Brand revenue of approximately $1.35M over the analysis period, this represents an estimated **$145K in incremental revenue without additional acquisition spend.**
 
 
+ 
 
 # Assumptions and Caveats 
 
+1. Impact estimates are based on conservative industry benchmarks and assume constant traffic volume, stable average order value, and improvement at a single funnel stage; results are directional and reflect associations observed in session-level data rather than causal effects.
 
+2. 
 
 
 
