@@ -404,7 +404,7 @@ To evaluate whether Organic and Direct traffic can be scaled without compromisin
 
 <br/>
 
-Initial funnel validation shows broadly consistent stage-level patterns across Organic and Direct traffic. However, deeper analysis reveals that mid-funnel attrition at the add-to-cart stage remains persistently high, and critically, this drop-off persists among repeat sessions, which account for a substantial share of traffic (61% for Organic and 64% for Direct).
+Initial funnel validation shows broadly consistent stage-level patterns across Organic and Direct traffic. However, deeper analysis reveals that **mid-funnel attrition** at the add-to-cart stage remains persistently high, and critically, this drop-off persists among **repeat sessions**, which account for a substantial share of traffic (**61% for Organic and 64% for Direct**).
 
 The presence of significant mid-funnel loss among repeat and brand-aware users indicates that conversion inefficiencies are not primarily driven by lack of intent or awareness, but are instead concentrated at the product-to-cart transition. As a result, while Organic and Direct channels are often constrained by limited traffic supply, the data suggests that scaling acquisition alone would amplify existing funnel leakage rather than deliver proportional gains.
 
