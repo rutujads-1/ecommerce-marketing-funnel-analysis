@@ -7,19 +7,20 @@ Analyzed e-commerce marketing performance using session-level data to evaluate a
 
 # Table of contents
 
-1. Project Background
+1. [Background and Overview](#background-and-overview)
 
-2. Data Structure and Overview
 
-3. Executive Summary
+2. [Data Structure and Overview](#data-structure-and-overview) 
 
-4. Insights Deep Dive
+3. [Executive Summary](#executive-summary)
 
-5. Recommendations
+4. [Insights Deep Dive](#insights-deep-dive)
 
-6. Assumptions and Caveats
+5. [Recommendations](#recommendations)
 
-7. Appendix Summary 
+6. [Assumptions and Caveats](assumptions-and-caveats)
+
+7. [Appendix Summary](appendix-summary) 
 
 
 
