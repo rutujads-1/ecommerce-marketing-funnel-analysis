@@ -222,40 +222,25 @@ In my view, overall growth was therefore driven by a combination of scalable pai
 
 ## Campaign Performance
 
-highlighting the need for deeper campaign-level analysis to understand differences in brand awareness, user intent, and conversion efficiency between Brand and Non-Brand campaigns.
+Highlighting the need for deeper campaign-level analysis to understand differences in brand awareness, user intent, and conversion efficiency between brand and nonbrand campaigns.
 
 
 
 **Traffic and Order Volume**
 
-<br>
-<br>
+<br><br>
 
 <div align="center">
-  <img src="images/campaign_perf_traffic.png" width="45%",style="display:inline-block;" />
-  <img src="images/campaign_perf_orders.png" width="45%" ,style="display:inline-block;"/>
+  <img src="images/campaign_perf_traffic.png" width="45%" />
+  <img src="images/campaign_perf_orders.png" width="45%" />
 </div>
 
-<br>
-<br>
+<br><br>
+
 
 Nonbrand campaigns consistently dominate Paid Search traffic, contributing **approximately 90% of paid sessions** between 2012 and 2014. This higher traffic volume translated into a greater number of orders relative to brand campaigns throughout the period, positioning **nonband as the primary driver of scale** within Paid Search.
 
 In my view, this distribution suggests that a large proportion of demand is captured through generic, nonbrand queries, indicating that **brand awareness** is **not yet the primary entry point** for a large share of users at the top of the funnel.
-
-
-**Revenue Contribution**
-<br>
-<br>
-
-<p align="center">
-  <img src="images/campaign_perf_gross_rev.png" alt="Gross Rev by campaign" width="500">
-</p>
-
-<br>
-<br>
-
-Gross revenue increased steadily from 2012 to 2014, with nonbrand campaigns accounting for approximately 88% of Paid Search revenue. This indicates that revenue growth within Paid Search was largely scale-driven, fueled by higher traffic volumes from nonbrand acquisition rather than superior per-session efficiency.
 
 
 **Conversion Efficiency**
@@ -274,11 +259,11 @@ Despite lower traffic volumes, brand campaigns consistently achieved higher conv
 
 **Revenue per Session (RPS)**
 
- <br>
+<br>
 <br>
 
 <p align="center">
-  <img src="images/channel_perf_RPS.png" alt="RPS by campaign" width="500">
+  <img src="images/campaign_perf_RPS.png" alt="RPS by campaign" width="500">
 </p>
 
 <br>
@@ -293,6 +278,17 @@ Together, these findings highlight a clear trade-off within Paid Search: nonbran
 ### Drivers of Campaign Performance Differences
 
 Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in conversion and order volume.
+
+
+<br>
+<br>
+
+<p align="center">
+  <img src="images/campaign_perf_drivers.png" alt="drivers by campaign" width="500">
+</p>
+
+<br>
+<br>
 
 **Device Type**
 
