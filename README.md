@@ -133,14 +133,15 @@ Views Used:
 
 
 
-Between 2012 and 2014, the business recorded **409K website sessions**, generating **27K orders** and **$1.6M in gross revenue**. **Paid Search** emerged as the dominant acquisition channel, contributing approximately **81%** of total website traffic.
+Between 2012 and 2014, the business recorded approximately **409K website sessions**, resulting in **27K orders** and **$1.6M in gross revenue**. Paid Search was the dominant acquisition channel, accounting for roughly **81%** of total website traffic.
 
-As website traffic increased over this period, both orders and conversion rates improved year-over-year, indicating that growth in traffic translated into meaningful business outcomes. 
+Website sessions increased steadily over the three-year period, coinciding with new product launches. Importantly, order volumes scaled proportionally with traffic growth, indicating that higher session volumes translated into tangible business outcomes rather than superficial traffic gains.
 
-Orders scaled proportionally with sessions, and key acquisition channels maintained stable or improving conversion performance across years. 
+Across acquisition channels, overall conversion performance  improved year over year, suggesting that traffic quality was maintained as the business scaled.
 
-This demonstrates that traffic growth did not dilute user intent and **suggests** that the business successfully attracted and converted high-intent users as scale increased.
+A pronounced surge in both sessions and orders was consistently observed during the Q3–Q4 period across all years. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q3–Q4 either increased or remained stable, indicating sustained user intent. This trend was particularly evident in Paid Search, the primary traffic driver, which suggests an influx of higher-intent users toward year-end.
 
+Overall, the data suggests that traffic growth did not dilute user intent. Instead, the business appears to have successfully scaled acquisition while continuing to attract and convert high-intent customers, particularly during peak seasonal periods.
 
 Given the strong year-over-year growth in traffic, orders, and conversion rate — alongside the heavy reliance on paid search which raises questions around efficiency, scalibility and dependency risk — the next step is to evaluate performance at the acquisition channel level.
 
@@ -308,7 +309,16 @@ While campaign-level analysis clarifies the intent mix driving acquisition perfo
 
 To identify where improvements in conversion performance can be most effectively achieved, funnel analysis is applied to Paid Search sessions, segmented into Brand and Non-Brand campaigns. 
 
-The objective of this analysis is to determine which stages of the purchase funnel exhibit the highest drop-offs and therefore represent the greatest opportunities for optimization.
+The objective of this analysis is to determine which stages of the purchase funnel exhibit the highest drop-offs and therefore represent the greatest opportunities for optimization.For clarity, the funnel is defined as follows:
+
+1. **Top of funnel:** Landing pages and product listing/discovery pages
+
+
+2. **Middle of funnel:** Product detail pages and add-to-cart interactions
+
+
+3. **Bottom of funnel:** Checkout experience, including shipping, billing, and order completion
+
 
 <br>
 <br>
@@ -335,26 +345,31 @@ The objective of this analysis is to determine which stages of the purchase funn
 
 
 
-**Nonbrand Funnel Analysis**
+**1. Top of the Funnel**
+
+Significant top-of-funnel drop-off is observed across both brand (~40%) and non-brand (~46%) traffic, with **nearly half of users failing to reach product pages**. This highlights a clear opportunity to optimize landing pages, particularly in how quickly and clearly products are surfaced.
+
+**The drop-off is more pronounced on mobile devices**, suggesting that mobile usability, page load performance, or content hierarchy may be key drivers of early-stage attrition.
+
+**2. Middle of the funnel**
 
 
-Year-wise analysis of Paid Non-Brand funnel drop-offs shows consistent improvement across all stages from 2012 to 2014. 
+The middle funnel exhibits significant attrition at the add-to-cart stage, with approximately **55% drop-off** observed across both **brand and non-brand traffic**. This indicates that a substantial share of users disengage at the product detail page level, failing to translate browsing interest into purchase intent.
 
-However, three stages continue to exhibit elevated drop-off rates by 2014. The largest early-stage drop-off(46.21%) occurs between entry and product discovery, indicating further opportunities to improve landing page relevance for discovery-driven users.
+While higher attrition among **non-brand traffic** is generally expected due to lower baseline intent, the fact that **brand traffic exhibits a comparable drop-off** is unexpected. Given that brand searches typically reflect stronger purchase intent, this pattern suggests that **product page experience, pricing perception, or value communication** may be constraining conversion even among high-intent users.
 
-Mid-funnel drop-off between product detail and cart(55.11%) remains high, which is expected given the exploratory nature of non-brand traffic. 
+To validate this hypothesis, repeat-session behavior within **Brand Search** was examined. Despite approximately **63% of brand sessions being repeat visits**, add-to-cart drop-off remains nearly identical for **repeat (55.02%) and non-repeat sessions (55.26%)**. This parity strongly indicates that mid-funnel loss is **experience-driven rather than intent-driven**, reinforcing the need for targeted improvements at the product page level.
 
-Most critically, checkout-to-conversion drop-off remains close to 50% despite improvements over time, suggesting persistent friction at the final conversion stage for high-intent users.
 
-**Brand Funnel Analysis**
+**3. Bottom of the Funnel**
 
-Brand campaign funnel analysis reveals three persistent friction points across years.
+The bottom of the funnel shows meaningful attrition during the checkout stage across nonbrand and brand, indicating potential friction within the checkout experience, particularly across shipping and billing steps.
 
-Despite improvements over time, product detail to cart drop-off(55.13%) remains elevated, indicating hesitation at the product decision stage even among brand-aware users.
+Device-level analysis suggests that **checkout abandonment varies significantly by device**. Desktop users exhibit lower drop-off rates overall (45% for brand, 48% for non-brand) compared to mobile users, where abandonment is substantially higher (64% for brand, 61% for non-brand).
 
-Checkout-to-conversion drop-off is ~ 49%, suggesting unresolved checkout friction impacting high-intent traffic.
+This disparity supports the hypothesis that device experience plays a material role in checkout completion, with mobile users likely encountering greater friction during shipping and payment flows. Potential contributors include form complexity, page load performance, input usability, or payment method availability on mobile devices.
 
-Additionally, consistent drop-off between entry and product discovery( ~40%) highlights opportunities to improve navigation and product visibility on entry pages rather than issues with acquisition intent.
+
 
 
 ## Funnel Analysis (Organic and Direct)
