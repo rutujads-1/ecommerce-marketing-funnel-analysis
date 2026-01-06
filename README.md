@@ -435,16 +435,22 @@ Recommended focus areas include simplifying shipping and billing forms, reducing
 
 **Estimated Impact**
 
-Applying a conservative benchmark-based scenario—improving checkout completion for Non-Brand traffic from ~49.6% to 55% while holding traffic and average order value constant—suggests a potential ~10–11% increase in Non-Brand revenue. 
+Applying a conservative benchmark-based scenario—**improving mid-funnel -specific product to cart,ie, add-to-cart rate in brand search traffic  funnel** from 44.9%  to 50%  while holding traffic and average order value constant—suggests a potential ~11.35% increase in Brand revenue.
 
-Based on observed Non-Brand revenue of approximately $1.35M over the analysis period, this represents an estimated **$145K in incremental revenue without additional acquisition spend.**
+Based on observed Brand revenue of approximately $156 K over the analysis period, this represents an estimated $19.7K in incremental revenue without additional acquisition spend.
 
-
+estimation details- link 
  
 
 # Assumptions and Caveats 
 
-Impact estimates are based on conservative industry benchmarks and assume constant traffic volume, stable average order value, and improvement at a single funnel stage; results are directional and reflect associations observed in session-level data rather than causal effects.
+1. Impact estimates are based on conservative industry benchmarks and assume constant traffic volume, stable average order value, and improvement at a single funnel stage; results are directional and reflect associations observed in session-level data rather than causal effects.
+
+2. Funnel analysis is performed at an aggregate level; performance differences across individual landing page, product page, and checkout variants are not explicitly analyzed.
+
+3. Product-level performance differences are not isolated and may contribute to observed funnel behavior.
+
+
 
 
 
