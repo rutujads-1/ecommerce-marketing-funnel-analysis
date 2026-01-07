@@ -65,17 +65,17 @@ link for sql query: https://github.com/rutujads-1/ecommerce-marketing-funnel-ana
 
 Fuzzy Factory's database structure as seen below consists of 6 tables-
 
-`orders`- Each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
+1. `orders`- Each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
 
-`order_items` - Each row corresponds to a unique order_items_id which give details about the contents of orders. 
+2. `order_items` - Each row corresponds to a unique order_items_id which give details about the contents of orders. 
 
-`order_item_refunds`- Each row corresponds to a refund for an order.
+3. `order_item_refunds`- Each row corresponds to a refund for an order.
 
-`products`- Each row is a unique product_id along with the name.
+4. `products`- Each row is a unique product_id along with the name.
 
-`website_sessions`- Each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
+5. `website_sessions`- Each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
 
-`website_pageviews`- Each row represents a unique pageview_id representing the different pageview across a wesbite session. 
+6. `website_pageviews`- Each row represents a unique pageview_id representing the different pageview across a wesbite session. 
 
 <br>
 <br>
