@@ -1,7 +1,7 @@
 # ecommerce-marketing-funnel-analysis
 
 
-Analyzed e-commerce marketing performance using session-level data to evaluate acquisition channels, campaign efficiency, and funnel health. Built SQL tables and a BI dashboard to identify conversion drivers, drop-offs, and optimization opportunities across channels.
+Analyzed e-commerce marketing performance using session-level data to evaluate channels, campaign efficiency, and funnel health. Built SQL tables and a BI dashboard to identify conversion drivers, drop-offs, and optimization opportunities across channels.
 
 
 
@@ -28,9 +28,9 @@ Analyzed e-commerce marketing performance using session-level data to evaluate a
 This analysis is conducted using an e-commerce database for Fuzzy Factory, an online retailer that has sold teddy bears since 2012 and has progressively expanded and diversified its product offerings over time. The business relies heavily on digital marketing to drive traffic, customer acquisition, and revenue growth.
 
 
-The primary objective of this analysis is to **support profitable revenue growth** and is intended to support:
+The primary objective of this analysis is to **support revenue growth** and is intended to support:
 
-1. **Marketing and Growth teams** responsible for acquisition strategy, campaign optimization, and channel investment decisions.
+1. **Marketing and Growth teams** responsible for marketing mix planning, channel stratergy execution and campaign optimisation. 
 
 2. **E-commerce and Conversion Optimization teams** responsible for improving on-site user experience, reducing funnel friction, and increasing conversion efficiency.
 
@@ -41,11 +41,11 @@ Insights and recommendations are developed in the following areas-
 
 **2. Acquisition Channel Performance:** assesses how different marketing channels contribute to volume and efficiency using *sessions, orders, and revenue by channel,conversion rate by channel and revenue per session by channel*.
 
-**3. Campaign Performance:**  Compares campaign performance within a channel using _sessions, orders, conversion rate, RPS, and gross revenue_ to highlight what is working best.
+**3. Campaign Performance:**  Compares campaign performance within a channel using _sessions, orders, conversion rate, RPS, and gross revenue_ .
 
-**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand campaign traffic through the conversion funnel using both- outcome metrics and funnel diagnostics, including- *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
+**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand campaign traffic through the conversion funnel using *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
 
-**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic channels analysing  funnel behavior across both channels  using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
+**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic channels analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
 
 
 link for dashboard:
@@ -64,17 +64,17 @@ link for sql query: https://github.com/rutujads-1/ecommerce-marketing-funnel-ana
 
 Fuzzy Factory's database structure as seen below consists of 6 tables-
 
-1. `orders`- Each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
+1. `orders`-  Contains 280K records where each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
 
-2. `order_items` - Each row corresponds to a unique order_items_id which give details about the contents of orders. 
+2. `order_items` -Contains 320K records where each row corresponds to a unique order_items_id which give details about the contents of orders. 
 
-3. `order_item_refunds`- Each row corresponds to a refund for an order.
+3. `order_item_refunds`- Contains ~9K records where each row corresponds to a refund for an order.
 
 4. `products`- Each row is a unique product_id along with the name.
 
-5. `website_sessions`- Each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
+5. `website_sessions`- Contains 4.7M records where each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
 
-6. `website_pageviews`- Each row represents a unique pageview_id representing the different pageview across a wesbite session. 
+6. `website_pageviews`- Contains 5.2M records each row represents a unique pageview_id representing the different pageview across a wesbite session. 
 
 <br>
 <br>
@@ -152,7 +152,7 @@ Between 2012 and 2014, the business recorded approximately **409K website sessio
 
 Website sessions increased steadily over the three-year period, coinciding with new product launches. **Importantly, order volumes scaled proportionally with traffic growth, indicating that higher session volumes translated into tangible business outcomes rather than superficial traffic gains. With increase in sessions year over year, overall conversion performance also  improved year over year, suggesting that traffic quality was maintained as the business scaled.**
 
-Paid search which drives the traffic,unlike organic and direct which are cost free channels,requires considerable amount of investments. Given the above finding, marketing teams can continue to allocate the amounts to paid search channels since increased traffic is translating to conversion and leading to orders.
+Paid search which drives the traffic,unlike organic and direct which are cost free channels,requires considerable amount of investments. Given the above finding, marketing teams should continue allocating  the same budget to paid search channels since increased traffic is translating to conversions.
 
 Further investigating into the movement of sessions and order volumes, a pronounced surge in both sessions and orders was consistently observed during the Q4 period across all years. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q4 either increased or remained stable, indicating sustained user intent. 
 
@@ -163,7 +163,7 @@ Further investigating into the movement of sessions and order volumes, a pronoun
 
 Website traffic is segmented into four acquisition channels based on the dataset: **Paid Search and paid social search, Organic search and Direct**. Paid Search, Organic, and Direct channels are present throughout the analysis period (2012–2014), while Paid Social was introduced in 2014.
 
-Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs associated while direct and organic searches have no associated costs and thus the goal here is to find stratergies harness these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated and revenue per session.
+Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs while direct and organic searches have no associated costs and thus the goal here is to find stratergies to harness these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated ,revenue per session and orders across products.
 
 
 **Conversion Rate By Channel**
@@ -177,7 +177,7 @@ Harnessing traffic through paid search and paid social search comes with a signi
 <br>
 
 
-Conversion rates across channels have increased over time, with Organic and Direct performing at levels comparable to Paid search, despite Paid operating at significantly higher traffic volumes. Since conversion rates across channels are at par, we need a stratergy for to improve brand awareness and stickyness so that the traffic we attract from paid search, which is almost 81%, could be then get converted to organic searches and direct traffic. 
+Conversion rates across channels have increased over time, with organic search and direct performing at levels comparable to paid search, despite paid search operating at  a significantly higher traffic volume. Since conversion rates across channels are at par, we need a stratergy to improve brand awareness and stickyness so that the traffic we attract from paid search, which is almost 81%, could then start coming through organic searches and direct traffic channels. 
 
 
 
@@ -211,7 +211,7 @@ Gross revenue trends closely track order volume, with Paid Search generating the
 <br>
 
 
-Revenue per session is broadly comparable across Paid ($3.88), Organic ($4.40), and Direct ($4.23) channels, indicating that sessions from each source generate similar economic value. Notably, Organic and Direct maintain this level of revenue efficiency despite substantially lower traffic volumes, reinforcing my interpretation that these channels are high-efficiency channels. 
+Revenue per session is broadly comparable across paid search, Organic search, and direct traffic channels, indicating that sessions from each source generate similar economic value. Notably, organic and direct maintain this level of revenue efficiency despite substantially lower traffic volumes, indicating that these channels are high-efficiency channels. 
 
 
 ## Campaign Performance
@@ -249,7 +249,8 @@ In my view, this distribution suggests that a large proportion of demand is capt
 <br>
 <br>
 
-Despite lower traffic volumes, brand campaigns consistently achieved higher conversion rates than nonbrand campaigns across all years. This pattern reflects brand awareness among brand users, as searches containing the brand name are more likely to originate from users already familiar with the product.
+Although ~ 90% paid search traffic comes from nonbrand campaign, the conversion rates across brand and nonbrand are comparable. Since the business invests more in nonbrand keywords and given that nonbrand drives traffic but brand and nonbrand convert at a comparable rate, we should work on performance-to-brand conversion stratergies which focus on converting users acquired through non-brand channels into users who actively seek out and search for the brand.
+
 
 **Revenue per Session (RPS)**
 
@@ -270,6 +271,7 @@ Across all four product categories, brand campaigns generated higher revenue per
 Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in conversion and order volume.
 
 
+
 <p align="center">
   <img src="images/campaign_perf_drivers.png" alt="drivers by campaign" width="500">
 </p>
@@ -284,8 +286,7 @@ Across nonbrand and brand campaigns, **desktop traffic** consistently outperform
 
 **Ad Content (UTM Content)**
 
-Comparison of Google and Bing ad variations within both brand and nonbrand campaigns shows that **Bing ads** consistently achieved comparable or higher conversion rates and revenue per session despite significantly lower traffic volumes. This suggests that Bing ads attract higher-intent users but suffer from limited reach relative to Google ads. 
-
+Comparison of Google and Bing ad variations within both brand and nonbrand campaigns shows that **Bing ads** consistently achieved comparable or higher conversion rates but drove significantly lower session and traffic volumes. Since google ads drive more traffic to the wesbite which leads to orders with comparable conversion rates to bing ads, ad spend in bing ads should be evaluated and reconsidered. 
 
 ## Funnel Analysis (Brand vs Nonbrand)
 
