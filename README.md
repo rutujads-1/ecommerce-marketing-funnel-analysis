@@ -1,7 +1,7 @@
 # ecommerce-marketing-funnel-analysis
 
 
-Analyzed e-commerce marketing performance using session-level data to evaluate acquisition channels, campaign efficiency, and funnel health. Built SQL models and BI dashboards to identify conversion drivers, drop-offs, and optimization opportunities across channels.
+Analyzed e-commerce marketing performance using session-level data to evaluate acquisition channels, campaign efficiency, and funnel health. Built SQL tables and a BI dashboard to identify conversion drivers, drop-offs, and optimization opportunities across channels.
 
 
 
@@ -29,11 +29,11 @@ Analyzed e-commerce marketing performance using session-level data to evaluate a
 This analysis is conducted using an e-commerce database for Fuzzy Factory, an online retailer that has sold teddy bears since 2012 and has progressively expanded and diversified its product offerings over time. The business relies heavily on digital marketing to drive traffic, customer acquisition, and revenue growth.
 
 
-The primary objective of this analysis is to **support profitable revenue growth** and is intended to support two primary business audiences:
+The primary objective of this analysis is to **support profitable revenue growth** and is intended to support:
 
-1. **Marketing and Growth teams**, responsible for acquisition strategy, campaign optimization, and channel investment decisions.
+1. **Marketing and Growth teams** responsible for acquisition strategy, campaign optimization, and channel investment decisions.
 
-2. **E-commerce and Conversion Optimization teams**, responsible for improving on-site user experience, reducing funnel friction, and increasing conversion efficiency.
+2. **E-commerce and Conversion Optimization teams** responsible for improving on-site user experience, reducing funnel friction, and increasing conversion efficiency.
 
 
 Insights and recommendations are developed in the following areas-
@@ -44,14 +44,14 @@ Insights and recommendations are developed in the following areas-
 
 **3. Campaign Performance:**  Compares campaign performance within a channel using _sessions, orders, conversion rate, RPS, and gross revenue_ to highlight what is working best.
 
-**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand traffic through the conversion funnel, with a focus on identifying differences in intent, efficiency, and friction across key funnel stages. This analysis uses both outcome metrics and funnel diagnostics, including- *brand and nonbrand funnel conversion rates,conversion rate gap (percentage points) between brand and nonbrand traffic,funnel entry rates and stage-level drop-offs and checkout completion rates*.
+**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand campaign traffic through the conversion funnel using both- outcome metrics and funnel diagnostics, including- *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
 
-**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic analysing  funnel behavior across both channels  using *funnel conversion rates for direct and organic traffic, conversion rate gap (percentage points) between direct and organic channels, stage-level funnel drop-off percentages and checkout completion rates*.
+**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic channels analysing  funnel behavior across both channels  using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
 
 
 link for dashboard:
 
-link for sql query: (https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_queries_maincodefile_ecommerce_marketing.sql)
+link for sql query: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_queries_maincodefile_ecommerce_marketing.sql
 
 
 
@@ -63,7 +63,19 @@ link for sql query: (https://github.com/rutujads-1/ecommerce-marketing-funnel-an
 
 
 
-Fuzzy Factory's database structure as seen below consists of 6 tables- `orders`, `order_items`,`order_item_refunds`,`products`, `website_sessions` and `website_pageviews` with a total of 1,735,068 records. 
+Fuzzy Factory's database structure as seen below consists of 6 tables-
+
+`orders`- Each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
+
+`order_items` - Each row corresponds to a unique order_items_id which give details about the contents of orders. 
+
+`order_item_refunds`- Each row corresponds to a refund for an order.
+
+`products`- Each row is a unique product_id along with the name.
+
+`website_sessions`- Each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
+
+`website_pageviews`- Each row represents a unique pageview_id representing the different pageview across a wesbite session. 
 
 <br>
 <br>
@@ -77,7 +89,7 @@ Fuzzy Factory's database structure as seen below consists of 6 tables- `orders`,
 
 
 
-Prior to the analysis, exploratory data analysis (EDA) was performed for quality control and familirization with the datasets. The SQL queries utilised for intital EDA can be found here- 
+Prior to the analysis, exploratory data analysis (EDA) was performed for quality control and familirization with the datasets. The SQL queries utilised for intital EDA can be found here- https://github.com/rutujads-1/ecommerce-marketing-funnel-
 
 
 **Dataset modelling and simplification**
@@ -109,21 +121,22 @@ Views Used:
 <br>
 <br>
 
-link for sql queries used to create views : (https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_views.sql)
+link for sql queries used to create views : https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_views.sql
 
 
 # Executive Summary
 <br>
-<br>
-
 
 <div align="center">
-  <img src="images/exec_traffic_dist.png" width="30%" />
+  <img src="images/exec_traffic_dist.png" width="50%" />
   
 </div>
 
 <br/>
 
+*note: Paid social channel was introduced in 2014 while rest of channels have been in place since 2012*
+
+<br>
 
 <div align="center">
   <img src="images/exec_summ_sessions_orders_movement.png" width="45%",style="display:inline-block;" />
@@ -136,37 +149,26 @@ link for sql queries used to create views : (https://github.com/rutujads-1/ecomm
 
 
 
-Between 2012 and 2014, the business recorded approximately **409K website sessions**, resulting in **27K orders** and **$1.6M in gross revenue**. Paid Search was the dominant acquisition channel, accounting for roughly **81%** of total website traffic.
+Between 2012 and 2014, the business recorded approximately **409K website sessions**, resulting in **27K orders** and **$1.6M in gross revenue**. Paid Search was the dominant channel, accounting for roughly **81%** of total website traffic.
 
-Website sessions increased steadily over the three-year period, coinciding with new product launches. Importantly, order volumes scaled proportionally with traffic growth, indicating that higher session volumes translated into tangible business outcomes rather than superficial traffic gains.
+Website sessions increased steadily over the three-year period, coinciding with new product launches. **Importantly, order volumes scaled proportionally with traffic growth, indicating that higher session volumes translated into tangible business outcomes rather than superficial traffic gains. With increase in sessions year over year, overall conversion performance also  improved year over year, suggesting that traffic quality was maintained as the business scaled.**
 
-Across acquisition channels, overall conversion performance  improved year over year, suggesting that traffic quality was maintained as the business scaled.
+Paid search which drives the traffic,unlike organic and direct which are cost free channels,requires considerable amount of investments. Given the above finding, marketing teams can continue to allocate the amounts to paid search channels since increased traffic is translating to conversion and leading to orders.
 
-A pronounced surge in both sessions and orders was consistently observed during the Q3–Q4 period across all years. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q3–Q4 either increased or remained stable, indicating sustained user intent. This trend was particularly evident in Paid Search, the primary traffic driver, which suggests an influx of higher-intent users toward year-end.
-
-Overall, the data suggests that traffic growth did not dilute user intent. Instead, the business appears to have successfully scaled acquisition while continuing to attract and convert high-intent customers, particularly during peak seasonal periods.
-
-Given the strong year-over-year growth in traffic, orders, and conversion rate — alongside the heavy reliance on paid search which raises questions around efficiency, scalibility and dependency risk — the next step is to evaluate performance at the acquisition channel level.
-
-
-Channel-level analysis will assess whether growth was driven by efficient, high-intent channels or by sheer traffic volume, identify relative channel effectiveness, and surface opportunities to optimize or diversify acquisition strategy.
-
+Further investigating into the movement of sessions and order volumes, a pronounced surge in both sessions and orders was consistently observed during the Q4 period across all years. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q4 either increased or remained stable, indicating sustained user intent. 
 
 
 # Insights Deep Dive
 
 ## Channel Performance
 
-Website traffic is segmented into four acquisition channels based on the dataset: **Paid Search, Organic, Direct, and Paid Social**. Paid Search, Organic, and Direct channels are present throughout the analysis period (2012–2014), while Paid Social was introduced in 2014.
+Website traffic is segmented into four acquisition channels based on the dataset: **Paid Search and paid social search, Organic search and Direct**. Paid Search, Organic, and Direct channels are present throughout the analysis period (2012–2014), while Paid Social was introduced in 2014.
 
-Channel performance is evaluated using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated and revenue per session.
+Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs associated while direct and organic searches have no associated costs and thus the goal here is to find stratergies harness these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated and revenue per session.
 
-This analysis compares how each channel contributes to traffic scale, conversion efficiency, and revenue generation, providing a foundation for identifying channels that drive volume versus those that deliver higher efficiency.
 
 **Conversion Rate By Channel**
 
-<br>
-<br>
 
 <p align="center">
   <img src="images/channle_perf_cvr.png" alt="CVR by channel" width="650">
@@ -176,7 +178,7 @@ This analysis compares how each channel contributes to traffic scale, conversion
 <br>
 
 
-Conversion rates across channels have increased over time, with Organic (7.4%) and Direct(7%) performing at levels comparable to Paid Search(6.6%), despite Paid operating at significantly higher traffic volumes. In my view, this parity suggests that traffic scale alone is not driving conversion performance, and highlights the need to examine funnel efficiency and stage-level behavior rather than relying solely on aggregate conversion metrics.
+Conversion rates across channels have increased over time, with Organic and Direct performing at levels comparable to Paid search, despite Paid operating at significantly higher traffic volumes. Since conversion rates across channels are at par, we need a stratergy for to improve brand awareness and stickyness so that the traffic we attract from paid search, which is almost 81%, could be then get converted to organic searches and direct traffic. 
 
 
 
@@ -198,8 +200,7 @@ Gross revenue trends closely track order volume, with Paid Search generating the
 
 
 **Revenue per session**
-<br>
-<br>
+
 
 <p align="center">
   
@@ -211,20 +212,12 @@ Gross revenue trends closely track order volume, with Paid Search generating the
 <br>
 
 
-Revenue per session is broadly comparable across Paid ($3.88), Organic ($4.40), and Direct ($4.23) channels, indicating that sessions from each source generate similar economic value. Notably, Organic and Direct maintain this level of revenue efficiency despite substantially lower traffic volumes, reinforcing my interpretation that these channels represent high-intent, high-efficiency acquisition sources
-
-
-
-Channel-level analysis indicates that traffic scaling and session quality were not mutually exclusive over the period analyzed. Paid Search successfully scaled traffic, orders, and revenue without a clear decline in revenue efficiency, while Organic and Direct channels demonstrated strong conversion efficiency and comparable revenue per session despite lower traffic volumes.
-
-In my view, overall growth was therefore driven by a combination of scalable paid acquisition and high-intent, high-efficiency non-paid channels, with aggregate performance metrics masking underlying funnel constraints that warrant deeper stage-level and campaign-level analysis.
-
-
+Revenue per session is broadly comparable across Paid ($3.88), Organic ($4.40), and Direct ($4.23) channels, indicating that sessions from each source generate similar economic value. Notably, Organic and Direct maintain this level of revenue efficiency despite substantially lower traffic volumes, reinforcing my interpretation that these channels are high-efficiency channels. 
 
 
 ## Campaign Performance
 
-Highlighting the need for deeper campaign-level analysis to understand differences in brand awareness, user intent, and conversion efficiency between brand and nonbrand campaigns.
+This section analyses differences in brand awareness, user intent, and conversion efficiency between brand and nonbrand campaigns.
 
 
 
@@ -257,7 +250,7 @@ In my view, this distribution suggests that a large proportion of demand is capt
 <br>
 <br>
 
-Despite lower traffic volumes, brand campaigns consistently achieved higher conversion rates than nonbrand campaigns across all years. This pattern reflects stronger purchase intent among brand users, as searches containing the brand name are more likely to originate from users already familiar with the product and closer to conversion.
+Despite lower traffic volumes, brand campaigns consistently achieved higher conversion rates than nonbrand campaigns across all years. This pattern reflects brand awareness among brand users, as searches containing the brand name are more likely to originate from users already familiar with the product.
 
 **Revenue per Session (RPS)**
 
@@ -273,17 +266,10 @@ Despite lower traffic volumes, brand campaigns consistently achieved higher conv
 
 Across all four product categories, brand campaigns generated higher revenue per session than nonbrand campaigns. This further reinforces the conclusion that brand traffic is more efficient at monetization once acquired, even though it contributes a smaller share of overall traffic.
 
-
-Together, these findings highlight a clear trade-off within Paid Search: nonbrand campaigns drive scale and revenue growth, while brand campaigns deliver superior efficiency and monetization per session.
-
-
 ### Drivers of Campaign Performance Differences
 
 Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in conversion and order volume.
 
-
-<br>
-<br>
 
 <p align="center">
   <img src="images/campaign_perf_drivers.png" alt="drivers by campaign" width="500">
@@ -297,16 +283,9 @@ Further breakdown of campaign performance indicates that device type and ad cont
 Across nonbrand and brand campaigns, **desktop traffic** consistently outperformed mobile traffic in terms of conversion rate, order volume, and revenue generation. While mobile sessions contributed incremental traffic, lower conversion rates suggest that device experience plays a role in overall campaign efficiency.
 
 
-
 **Ad Content (UTM Content)**
 
 Comparison of Google and Bing ad variations within both brand and nonbrand campaigns shows that **Bing ads** consistently achieved comparable or higher conversion rates and revenue per session despite significantly lower traffic volumes. This suggests that Bing ads attract higher-intent users but suffer from limited reach relative to Google ads. 
-
-
-These patterns indicate that campaign performance differences are influenced not only by traffic volume, but also by device experience and ad-level targeting, highlighting opportunities for optimization beyond budget allocation alone.
-
-
-While campaign-level analysis explains acquisition performance, it does not capture how users progress through the conversion journey. The analysis therefore moves to funnel-level evaluation across paid and non-paid channels.
 
 
 ## Funnel Analysis (Brand vs Nonbrand)
@@ -360,7 +339,7 @@ Significant top-of-funnel drop-off is observed across both brand (~40%) and non-
 
 The middle funnel exhibits significant attrition at the add-to-cart stage, with approximately **55% drop-off** observed across both **brand and non-brand traffic**. This indicates that a substantial share of users disengage at the product detail page level, failing to translate browsing interest into purchase intent.
 
-While higher attrition among **non-brand traffic** is generally expected due to lower baseline intent, the fact that **brand traffic exhibits a comparable drop-off** is unexpected. Given that brand searches typically reflect stronger purchase intent, this pattern suggests that **product page experience, pricing perception, or value communication** may be constraining conversion even among high-intent users.
+While higher attrition among **non-brand traffic** is generally expected due to lower brand awareness and more exploration across other offerings the fact that **brand traffic exhibits a comparable drop-off** is unexpected. Given that brand searches typically reflect stronger purchase intent, this pattern suggests that **product page experience, pricing perception, or value communication** may be constraining conversion even among high-intent users.
 
 To validate this hypothesis, repeat-session behavior within **Brand Search** was examined. Despite approximately **63% of brand sessions being repeat visits**, add-to-cart drop-off remains nearly identical for **repeat (55.02%) and non-repeat sessions (55.26%)**. This parity strongly indicates that mid-funnel loss is **experience-driven rather than intent-driven**, reinforcing the need for targeted improvements at the product page level.
 
@@ -380,9 +359,6 @@ This disparity supports the hypothesis that device experience plays a material r
 
 To evaluate whether Organic and Direct traffic can be scaled without compromising conversion efficiency, funnel analysis was applied to unpaid acquisition channels. The assessment examines stage-level progression and drop-offs within the purchase funnel to determine whether growth constraints stem from acquisition volume or funnel performance.
 
-
-<br>
-<br>
 
 
 <div align="center">
@@ -413,24 +389,9 @@ These findings indicate that mid-funnel optimization—particularly improving ad
 
 # Recommendations 
 
-**1. Landing Page Optimization (Top of Funnel)**
-
-Analysis indicates substantial top-of-funnel drop-off across channels, suggesting that a significant share of users do not progress from landing pages to product discovery. 
-
-This highlights the need to optimize landing pages to more effectively surface products, align messaging with user intent, and reduce early-stage friction. Improvements in content hierarchy, load performance, and clarity of value proposition could help increase progression into the product exploration stage.
-
-**2. Product Page Optimization (Mid Funnel)**
-
-Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. 
-
-Optimization efforts should focus on improving product information clarity, pricing and value perception, and add-to-cart usability to better convert existing interest into purchase intent. Addressing these issues is a necessary prerequisite before scaling acquisition can be expected to deliver proportional gains.
-
-**3. Checkout Optimization by Device (Bottom of Funnel)**
+**1. Checkout Optimization by Device (Bottom of Funnel)**
    
-Checkout attrition is significantly higher on mobile devices compared to desktop across both brand and non-brand traffic, indicating that device-specific friction is a key contributor to bottom-of-funnel loss. Given that mobile users abandon checkout at materially higher rates, optimization efforts should prioritize the mobile checkout experience.
-
-Recommended focus areas include simplifying shipping and billing forms, reducing input effort through autofill and address lookup, improving mobile page load performance, and expanding mobile-friendly payment options (e.g., digital wallets). Improving mobile checkout usability is likely to yield disproportionate gains in order completion, particularly given the volume of mobile traffic entering the funnel.
-
+Checkout attrition is significantly higher on mobile devices compared to desktop across both brand and non-brand traffic, indicating that device-specific friction is a key contributor to bottom-of-funnel loss. Given that this is the easiest stage optimise because of the fact that users coming to this stage have the higgest likelihood of making a purchase optimization efforts should prioritize the imporvement of checkout experience first.
 
 **Estimated Impact**
 
@@ -438,8 +399,20 @@ Applying a conservative benchmark-based scenario—**improving mid-funnel -speci
 
 Based on observed Brand revenue of approximately $156 K over the analysis period, this represents an estimated $19.7K in incremental revenue without additional acquisition spend.
 
-estimation details- link 
- 
+**2. Product Page Optimization (Mid Funnel)**
+
+Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve stickyness which could lead to improvements in organic search and direct traffic as well.
+
+**3. Landing Page Optimization (Top of Funnel)**
+
+Analysis indicates substantial top-of-funnel drop-off across channels, suggesting that a significant share of users do not progress from landing pages to product discovery. 
+
+This highlights the need to optimize landing pages to more effectively surface products, align messaging with user intent, and reduce early-stage friction. Improvements in content hierarchy, load performance, and clarity of value proposition could help increase progression into the product exploration stage.
+
+**4. Introduction of site level campaigns such as loyalty programs to improve brand stickyness**
+
+Conversion rates across channels are comparable. Since 81% of the traffic is driven by paid searches, improving brand stickyness for this segment could lead to this segment converting to organic searches or direct traffic which would prove to be cost efficient. 
+
 
 # Assumptions and Caveats 
 
