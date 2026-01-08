@@ -203,7 +203,7 @@ Conversion rates across channels have increased over time, with organic search a
 <br>
 <br>
 
-Gross revenue trends closely track order volume, with Paid Search generating the highest total revenue ($1.3M) due to its ability to scale traffic. In contrast, Organic and Direct contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
+Gross revenue trends closely track order volume, with paid search generating the highest total revenue ($1.3M) due to its ability to scale traffic. In contrast, Organic and Direct contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
 
 
  
@@ -261,20 +261,6 @@ In my view, this distribution suggests that a large proportion of demand is capt
 
 Although ~ 90% paid search traffic comes from nonbrand campaign, the conversion rates across brand and nonbrand are comparable. Since the business invests more in nonbrand keywords and given that nonbrand drives traffic but brand and nonbrand convert at a comparable rate, we should work on performance-to-brand conversion stratergies which focus on converting users acquired through non-brand channels into users who actively seek out and search for the brand.
 
-
-**Revenue per Session (RPS)**
-
-<br>
-<br>
-
-<p align="center">
-  <img src="images/campaign_perf_RPS.png" alt="RPS by campaign" width="500">
-</p>
-
-<br>
-<br>
-
-Across all four product categories, brand campaigns generated higher revenue per session than nonbrand campaigns. This further reinforces the conclusion that brand traffic is more efficient at monetization once acquired, even though it contributes a smaller share of overall traffic.
 
 ### Drivers of Campaign Performance Differences
 
@@ -416,26 +402,22 @@ Applying a conservative benchmark-based scenario-**improving bottom-funnel- spec
 Based on observed brand campaign revenue of ~ $156 K and nonbrand campaign revenue of ~ 1.12M  over the analysis period, this represents an estimated **$32K in incremental revenue in brand campaign** and **~238K in incremental revenue in nonbrand campaign** without additional acquisition spend.
 
 
-**2. Product Page Optimization (Mid Funnel)**
-
-Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve brand stickiness which could lead to improvements in organic search and direct traffic as well.
-
-**3. Landing Page Optimization (Top of Funnel)**
+**2. Landing Page Optimization (Top of Funnel)**
 
 Analysis indicates substantial top-of-funnel drop-off across channels, suggesting that a significant share of users do not progress from landing pages to product discovery. 
 
 This highlights the need to optimize landing pages to more effectively surface products, align messaging with user intent, and reduce early-stage friction. Improvements in content hierarchy, load performance, and clarity of value proposition could help increase progression into the product exploration stage.
 
-**4. Introduction of site level campaigns such as loyalty programs to improve brand stickiness**
+**3. Introduction of site level campaigns such as loyalty programs to improve brand stickiness**
 
-Conversion rates across channels are comparable. Since 81% of the traffic is driven by paid searches, improving brand stickiness for this segment could lead to this segment converting to organic searches or direct traffic which would prove to be cost efficient. 
+Conversion rates across channels are comparable. Since 81% of the traffic is driven by paid searches, improving brand stickiness for this segment could lead to this segment converting to organic searches or direct traffic which would prove to be cost efficient. This could also help in reducing the mid-funnel attrition. 
 
 
 # Assumptions and Caveats 
 
 1. Impact estimates are based on conservative industry benchmarks and assume constant traffic volume, stable average order value, and improvement at a single funnel stage; results are directional and reflect associations observed in session-level data rather than causal effects.
 
-2. Marketing spends are not known and are assumed to be higher in some areas and  lower across others. 
+2. Marketing spends are not known and are assumed to be higher in some areas and lower across others. 
 
 3. Funnel analysis is performed at an aggregate level; performance differences across individual landing page, product page, and checkout variants are not explicitly analyzed.
 
