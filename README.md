@@ -39,13 +39,13 @@ Insights and recommendations are developed in the following areas-
 
 **1. Executive Performance Overview:** evaluates overall business scale, growth, and efficiency using *website sessions,orders and gross revenue,conversion rate(CVR) and revenue per session(RPS)*.
 
-**2. Acquisition Channel Performance:** assesses how different marketing channels contribute to volume and efficiency using *sessions, orders, and revenue by channel,conversion rate by channel and revenue per session by channel*.
+**2. Channel Performance:** assesses how different marketing channels contribute to volume and efficiency using *sessions, orders, and revenue by channel,conversion rate by channel and revenue per session by channel*.
 
-**3. Campaign Performance:**  Compares campaign performance within a channel using _sessions, orders, conversion rate, RPS, and gross revenue_ .
+**3. Campaign Performance:**  Compares campaign performance within a channel using _order volume, conversion rate, RPS, and gross revenue_ .
 
-**4. Paid Funnel Health (brand vs nonbrand):** Evaluates the performance of Paid Search campaigns by comparing brand and nonbrand campaign traffic through the conversion funnel using *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
+**4. Paid Search Channel Funnel Health (brand campaign vs nonbrand campaign):** Evaluates the performance of paid search channel by comparing brand and nonbrand campaign traffic through the conversion funnel using *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
 
-**5. Unpaid Channel Funnel Health(organic and direct):** evaluates funnel performance for Direct and Organic traffic channels analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
+**5. Unpaid Search Channel Funnel Health(organic search and direct traffic):** evaluates funnel performance for organic search and direct raffic channels by analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
 
 
 link for dashboard:
@@ -70,7 +70,7 @@ Fuzzy Factory's database structure as seen below consists of 6 tables-
 
 3. `order_item_refunds`- Contains ~9K records where each row corresponds to a refund for an order.
 
-4. `products`- Each row is a unique product_id along with the name.
+4. `products`- Contains 4 records with each row being a unique product_id along with the name and launch date.
 
 5. `website_sessions`- Contains 4.7M records where each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
 
@@ -99,7 +99,7 @@ All dashboards and insights are based on these analytical views rather than the 
 
 Views Used:
 
-1. `view_fact_table_sessions` – Session-level view with derived marketing channels and device attributes
+1. `view_fact_table_sessions` – Session-level view with marketing channels 
     
 2.  `view_fact_orders` – Order-level view including gross revenue, refunds, net revenue, and profit metrics
    
@@ -107,7 +107,6 @@ Views Used:
   
 4. `vw_dim_products` – Product dimension with product names and launch dates
   
-5. `vw_bridged_converted_sessions` – Bridge view identifying sessions that resulted in an order
 
 
 <br>
@@ -152,20 +151,20 @@ Between 2012 and 2014, the business recorded approximately **409K website sessio
 
 Website sessions increased steadily over the three-year period, coinciding with new product launches. **Importantly, order volumes scaled proportionally with traffic growth, indicating that higher session volumes translated into tangible business outcomes rather than superficial traffic gains. With increase in sessions year over year, overall conversion performance also  improved year over year, suggesting that traffic quality was maintained as the business scaled.**
 
-Paid search which drives the traffic,unlike organic and direct which are cost free channels,requires considerable amount of investments. Given the above finding, marketing teams should continue allocating  the same budget to paid search channels since increased traffic is translating to conversions.
+Paid search which drives the traffic, unlike organic search and direct traffic which are cost free channels, requires considerable amount of investments. Given the above finding, marketing teams should continue allocating the same budget to the paid search channel since increased traffic is translating to conversions.
 
-Further investigating into the movement of sessions and order volumes, a pronounced surge in both sessions and orders was consistently observed during the Q4 period across all years. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q4 either increased or remained stable, indicating sustained user intent. 
+Further investigating into the movement of sessions and order volumes, a pronounced surge in both sessions and orders was consistently observed during the Q4 period across all years with the driver of the search being the main product- The Original Mr Fuzzy. I hypothesize this pattern is driven by holiday season demand, supported by the fact that conversion rates during Q4 either increased or remained stable, indicating sustained user intent. 
 
 
 # Insights Deep Dive
 
 ## Channel Performance
 
-Website traffic is segmented into four acquisition channels based on the dataset: **Paid Search and paid social search, Organic search and Direct**. Paid Search, Organic, and Direct channels are present throughout the analysis period (2012–2014), while Paid Social was introduced in 2014.
+Website traffic is segmented into four channels based on the dataset: **Paid search and Paid Social search, Organic search and Direct**. Paid search, organic, and direct channels are present throughout the analysis period (2012–2014), while paid social was introduced in 2014.
 
-Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs while direct and organic searches have no associated costs and thus the goal here is to find stratergies to harness these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated ,revenue per session and orders across products.
+Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs while direct and organic searches have no associated costs and thus the goal here is to find stratergies to leverage these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: order volume,conversion rate, gross revenue generated and revenue per session.
 
-**Order Volume across Products**
+**Order Volume By Channel**
 
 <p align="center">
   <img src="images/channle_perf_cvr.png" alt="CVR by channel" width="650">
@@ -203,12 +202,12 @@ Conversion rates across channels have increased over time, with organic search a
 <br>
 <br>
 
-Gross revenue trends closely track order volume, with paid search generating the highest total revenue ($1.3M) due to its ability to scale traffic. In contrast, Organic and Direct contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
+Gross revenue trends closely track order volume, with paid search generating the highest total revenue ($1.3M) due to its ability to scale traffic. In contrast, organic search traffic and direct traffic contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
 
 
  
 
-**Revenue per session**
+**Revenue per session By Channel**
 
 
 <p align="center">
@@ -221,7 +220,7 @@ Gross revenue trends closely track order volume, with paid search generating the
 <br>
 
 
-Revenue per session is broadly comparable across paid search, Organic search, and direct traffic channels, indicating that sessions from each source generate similar economic value. Notably, organic and direct maintain this level of revenue efficiency despite substantially lower traffic volumes, indicating that these channels are high-efficiency channels. 
+Revenue per session is broadly comparable across paid search, organic search and direct traffic channels, indicating that sessions from each source generate similar economic value. Notably, organic search traffic and direct traffic channels maintain this level of revenue efficiency despite substantially lower traffic volumes, indicating that these channels are high-efficiency channels. 
 
 
 ## Campaign Performance
@@ -242,7 +241,7 @@ This section analyses differences in brand awareness, user intent, and conversio
 <br><br>
 
 
-Nonbrand campaigns consistently dominate Paid Search traffic, contributing **approximately 90% of paid sessions** between 2012 and 2014. This higher traffic volume translated into a greater number of orders relative to brand campaigns throughout the period, positioning **nonband as the primary driver of scale** within Paid Search.
+Nonbrand campaign consistently dominate paid search traffic, contributing **approximately 90% of paid search sessions** between 2012 and 2014. This higher traffic volume translated into a greater number of orders relative to brand campaigns throughout the period, positioning **nonband as the primary driver of scale** within paid search.
 
 In my view, this distribution suggests that a large proportion of demand is captured through generic, nonbrand queries, indicating that **brand awareness** is **not yet the primary entry point** for a large share of users at the top of the funnel.
 
@@ -259,12 +258,12 @@ In my view, this distribution suggests that a large proportion of demand is capt
 <br>
 <br>
 
-Although ~ 90% paid search traffic comes from nonbrand campaign, the conversion rates across brand and nonbrand are comparable. Since the business invests more in nonbrand keywords and given that nonbrand drives traffic but brand and nonbrand convert at a comparable rate, we should work on performance-to-brand conversion stratergies which focus on converting users acquired through non-brand channels into users who actively seek out and search for the brand.
+Although ~ 90% paid search traffic comes from nonbrand campaign, the conversion rates across brand and nonbrand are comparable. Since the business invests more in nonbrand keywords and given that nonbrand campaign drives traffic but brand and nonbrand campaigns convert at a comparable rate, we should work on performance-to-brand conversion stratergies which focus on converting users acquired through nonbrand campaign into users who actively seek out and search for the brand.
 
 
 ### Drivers of Campaign Performance Differences
 
-Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in conversion and order volume.
+Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in sessions, conversion and order volume.
 
 
 
@@ -277,18 +276,18 @@ Further breakdown of campaign performance indicates that device type and ad cont
 
 **Device Type**
 
-Across nonbrand and brand campaigns, **desktop** brings in more traffic than **mobile**. Almost **72%** of nonbrand traffic and **~ 65%** of brand traffic comes from desktop which suggest that device experience plays a role in overall campaign efficiency.
+Across nonbrand and brand campaigns, **desktop** brings in more traffic than **mobile**. Almost **72%** of nonbrand campaign traffic and **65%** of brand campaign traffic comes from desktop which suggest that device experience plays a role in overall campaign efficiency.
 
 
 **Ad Content (UTM Content)**
 
-Comparison of Google and Bing ad variations within both brand and nonbrand campaigns shows that **Bing ads** consistently achieved comparable or higher conversion rates but drove significantly lower session and traffic volumes. Since google ads drive more traffic to the wesbite which leads to orders with comparable conversion rates to bing ads, ad spend in bing ads should be evaluated and reconsidered. 
+Comparison of **Google and Bing ad** variations within both brand and nonbrand campaigns shows that both variations achieved comparable conversion rates but google ads drove significantly higher session and traffic volumes. Since google ads drive more traffic to the wesbite which leads to orders with comparable conversion rates to bing ads, ad spend in bing ads should be re-evaluated. 
 
-## Funnel Analysis (Brand vs Nonbrand)
+## Funnel Analysis- Paid Search Channel (Brand campaign vs Nonbrand campaign)
 
-To identify where improvements in conversion performance can be most effectively achieved, funnel analysis is applied to Paid Search sessions, segmented into Brand and Non-Brand campaigns. 
+To identify where improvements in conversion performance can be most effectively achieved, funnel analysis is applied to paid search sessions, segmented into brand and nonbrand campaigns. 
 
-The objective of this analysis is to determine which stages of the purchase funnel exhibit the highest drop-offs and therefore represent the greatest opportunities for optimization.For clarity, the funnel is defined as follows:
+The objective of this analysis is to determine which stages of the purchase funnel exhibit the highest drop-offs and therefore represent the greatest opportunities for optimization. For clarity, the funnel is defined as follows:
 
 1. **Top of funnel:** Landing pages and product listing/discovery pages
 
@@ -326,32 +325,31 @@ The objective of this analysis is to determine which stages of the purchase funn
 
 **1. Top of the Funnel**
 
-Significant top-of-funnel drop-off is observed across both brand (~40%) and non-brand (~46%) traffic, with **nearly half of users failing to reach product pages**. This highlights a clear opportunity to optimize landing pages, particularly in how quickly and clearly products are surfaced.
+Significant top-of-funnel drop-off is observed across both brand (~40%) and nonbrand (~46%) campaign traffic, with **nearly half of users failing to reach product pages**. This highlights a clear opportunity to optimize landing pages, particularly in how quickly and clearly products are surfaced.
 
 **The drop-off is more pronounced on mobile devices**, suggesting that mobile usability, page load performance, or content hierarchy may be key drivers of early-stage attrition.
 
 **2. Middle of the funnel**
 
-
-The middle funnel exhibits significant attrition at the add-to-cart stage, with approximately **55% drop-off** observed across both **brand and non-brand traffic**. This indicates that a substantial share of users disengage at the product detail page level, failing to translate browsing interest into purchase intent.
+The middle funnel exhibits significant attrition at the add-to-cart stage, with approximately **55% drop-off** observed across both **brand and nonbrand campaign traffic**. This indicates that a substantial share of users disengage at the product detail page level, failing to translate browsing interest into purchase intent.
 
 This attrition can likely be attributed to brand stickiness and loyalty as users could be comparing other product offerings leading to this drop off. To address this stratergies to introduce visible offers, loyalty benefits and value cues on product pages can be experimented with.
 
 
 **3. Bottom of the Funnel**
 
-The bottom of the funnel shows meaningful attrition during the checkout stage across nonbrand and brand, indicating potential friction within the checkout experience, particularly across shipping and billing steps.
+The bottom of the funnel shows meaningful attrition during the checkout stage across nonbrand and brand campaigns, indicating potential friction within the checkout experience, particularly across shipping and billing steps.
 
-Device-level analysis suggests that **checkout abandonment varies significantly by device**. Desktop users exhibit lower drop-off rates overall (45% for brand, 48% for non-brand) compared to mobile users, where abandonment is substantially higher (64% for brand, 61% for non-brand).
+Device-level analysis suggests that **checkout abandonment varies significantly by device**. Desktop users exhibit lower drop-off rates overall (45% for brand campaign, 48% for nonbrand campaign) compared to mobile users, where abandonment is substantially higher (64% for brand campaign, 61% for nonbrand campaign).
 
 This disparity supports the hypothesis that device experience plays a material role in checkout completion, with mobile users likely encountering greater friction during shipping and payment flows. Potential contributors include form complexity, page load performance, input usability, or payment method availability on mobile devices.
 
 
 
 
-## Funnel Analysis (Organic and Direct)
+## Funnel Analysis- Unpaid Search Channel (Organic search and Direct )
 
-To evaluate whether organic and direct traffic can be scaled without compromising conversion efficiency, funnel analysis was applied to unpaid channels. The assessment examines stage-level progression and drop-offs within the purchase funnel to determine whether growth constraints stem from acquisition volume or funnel performance.
+To evaluate whether organic search and direct traffic can be scaled without compromising conversion efficiency, funnel analysis was applied to unpaid channels. The assessment examines stage-level progression and drop-offs within the purchase funnel to determine whether growth constraints stem from acquisition volume or funnel performance.
 
 
 
@@ -374,7 +372,7 @@ To evaluate whether organic and direct traffic can be scaled without compromisin
 
 <br/>
 
-Initial funnel validation shows broadly consistent stage-level patterns across organic and direct traffic.Deeper analysis reveals similar attrition patterns across the various stages of the funnel as seen in paid channels.
+Initial funnel validation shows broadly consistent stage-level patterns across organic search and direct traffic.Deeper analysis reveals similar attrition patterns across the various stages of the funnel as seen in the paid channel.
 
 **1. Top of the funnel**
 
@@ -393,7 +391,7 @@ Drop offs in the bottom of the funnel, similar to paid search traffic are high f
 
 **1. Checkout Optimization by Device (Bottom of Funnel)**
    
-Checkout attrition is significantly higher in both brand and non-brand traffic.This is the **high priority stage for optimisation** because of the fact that users coming to this stage have the **higgest likelihood of making a purchase**. 
+Checkout attrition is significantly higher in both brand and nonbrand traffic.This is the **high priority stage for optimisation** because of the fact that users coming to this stage have the **higgest likelihood of making a purchase**. 
 
 **Estimated Impact**
 
