@@ -119,8 +119,7 @@ Views Used:
 <br>
 <br>
 
-link for sql queries used to create views : https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_views.sql
-
+link for sql queries used to create views: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_table_views.sql
 
 # Executive Summary
 <br>
