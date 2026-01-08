@@ -1,7 +1,7 @@
 # ecommerce-marketing-funnel-analysis
 
 
-Analyzed e-commerce marketing performance using session-level data to evaluate channels, campaign efficiency, and funnel health. Built SQL tables and a BI dashboard to identify conversion drivers, drop-offs, and optimization opportunities across channels.
+Analyzed e-commerce marketing performance using session-level data to evaluate channels, campaign efficiency, and funnel health. Conducted analysis using SQL and built a BI dashboard to identify conversion drivers, drop-offs, and optimization opportunities across channels.
 
 
 
@@ -165,6 +165,16 @@ Website traffic is segmented into four acquisition channels based on the dataset
 
 Harnessing traffic through paid search and paid social search comes with a significant amount of marketing costs while direct and organic searches have no associated costs and thus the goal here is to find stratergies to harness these channels by comparing channel performances using a combination of efficiency and revenue metrics, including: conversion rate, gross revenue generated ,revenue per session and orders across products.
 
+**Order Volume across Products**
+
+<p align="center">
+  <img src="images/channle_perf_cvr.png" alt="CVR by channel" width="650">
+</p>
+
+<br>
+<br
+  
+Across all the 4 product categories, paid search channel drives the highest order volume over the three year period which is nearly 80% of the total orders. 
 
 **Conversion Rate By Channel**
 
@@ -177,7 +187,7 @@ Harnessing traffic through paid search and paid social search comes with a signi
 <br>
 
 
-Conversion rates across channels have increased over time, with organic search and direct performing at levels comparable to paid search, despite paid search operating at  a significantly higher traffic volume. Since conversion rates across channels are at par, we need a stratergy to improve brand awareness and stickyness so that the traffic we attract from paid search, which is almost 81%, could then start coming through organic searches and direct traffic channels. 
+Conversion rates across channels have increased over time, with organic search and direct performing at levels comparable to paid search, despite paid search operating at  a significantly higher traffic volume. Since conversion rates across channels are at par, we need a stratergy to improve brand awareness and stickiness so that the traffic we attract from paid search, which is almost 81%, could then start coming through organic searches and direct traffic channels. 
 
 
 
@@ -193,10 +203,10 @@ Conversion rates across channels have increased over time, with organic search a
 <br>
 <br>
 
-Gross revenue trends closely track order volume, with Paid Search generating the highest total revenue ($1.28M) due to its ability to scale traffic. In contrast, Organic and Direct contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
+Gross revenue trends closely track order volume, with Paid Search generating the highest total revenue ($1.3M) due to its ability to scale traffic. In contrast, Organic and Direct contribute lower absolute revenue primarily as a function of lower session volumes, rather than weaker per-session performance. This indicates that differences in revenue contribution across channels are volume-driven rather than efficiency-driven.
 
 
-
+ 
 
 **Revenue per session**
 
@@ -281,7 +291,7 @@ Further breakdown of campaign performance indicates that device type and ad cont
 
 **Device Type**
 
-Across nonbrand and brand campaigns, **desktop traffic** consistently outperformed mobile traffic in terms of conversion rate, order volume, and revenue generation. While mobile sessions contributed incremental traffic, lower conversion rates suggest that device experience plays a role in overall campaign efficiency.
+Across nonbrand and brand campaigns, **desktop** brings in more traffic than **mobile**. Almost **72%** of nonbrand traffic and **~ 65%** of brand traffic comes from desktop which suggest that device experience plays a role in overall campaign efficiency.
 
 
 **Ad Content (UTM Content)**
@@ -339,9 +349,7 @@ Significant top-of-funnel drop-off is observed across both brand (~40%) and non-
 
 The middle funnel exhibits significant attrition at the add-to-cart stage, with approximately **55% drop-off** observed across both **brand and non-brand traffic**. This indicates that a substantial share of users disengage at the product detail page level, failing to translate browsing interest into purchase intent.
 
-While higher attrition among **non-brand traffic** is generally expected due to lower brand awareness and more exploration across other offerings the fact that **brand traffic exhibits a comparable drop-off** is unexpected. Given that brand searches typically reflect stronger purchase intent, this pattern suggests that **product page experience, pricing perception, or value communication** may be constraining conversion even among high-intent users.
-
-To validate this hypothesis, repeat-session behavior within **Brand Search** was examined. Despite approximately **63% of brand sessions being repeat visits**, add-to-cart drop-off remains nearly identical for **repeat (55.02%) and non-repeat sessions (55.26%)**. This parity strongly indicates that mid-funnel loss is **experience-driven rather than intent-driven**, reinforcing the need for targeted improvements at the product page level.
+This attrition can likely be attributed to brand stickiness and loyalty as users could be comparing other product offerings leading to this drop off. To address this stratergies to introduce visible offers, loyalty benefits and value cues on product pages can be experimented with.
 
 
 **3. Bottom of the Funnel**
@@ -357,7 +365,7 @@ This disparity supports the hypothesis that device experience plays a material r
 
 ## Funnel Analysis (Organic and Direct)
 
-To evaluate whether Organic and Direct traffic can be scaled without compromising conversion efficiency, funnel analysis was applied to unpaid acquisition channels. The assessment examines stage-level progression and drop-offs within the purchase funnel to determine whether growth constraints stem from acquisition volume or funnel performance.
+To evaluate whether organic and direct traffic can be scaled without compromising conversion efficiency, funnel analysis was applied to unpaid channels. The assessment examines stage-level progression and drop-offs within the purchase funnel to determine whether growth constraints stem from acquisition volume or funnel performance.
 
 
 
@@ -380,18 +388,26 @@ To evaluate whether Organic and Direct traffic can be scaled without compromisin
 
 <br/>
 
-Initial funnel validation shows broadly consistent stage-level patterns across Organic and Direct traffic. However, deeper analysis reveals that **mid-funnel attrition** at the add-to-cart stage remains persistently high, and critically, this drop-off persists among **repeat sessions**, which account for a substantial share of traffic (**61% for Organic and 64% for Direct**).
+Initial funnel validation shows broadly consistent stage-level patterns across organic and direct traffic.Deeper analysis reveals similar attrition patterns across the various stages of the funnel as seen in paid channels.
 
-The presence of significant mid-funnel loss among repeat and brand-aware users indicates that conversion inefficiencies are not primarily driven by lack of intent or awareness, but are instead concentrated at the product-to-cart transition. As a result, while Organic and Direct channels are often constrained by limited traffic supply, the data suggests that scaling acquisition alone would amplify existing funnel leakage rather than deliver proportional gains.
+**1. Top of the funnel**
 
-These findings indicate that mid-funnel optimization—particularly improving add-to-cart performance—is a prerequisite for efficient scaling within Organic and Direct channels.
+Drop offs from the landing page to the product page are comparable across organic search traffic(39.2%) and direct channel traffic( 40.70%). 
+
+**2. Middle of the funnel**
+
+Drop offs in the middle of the funnel remain high similar to paid search traffic funnels. The drop of rates across the unpaid channels are comparable.
+
+**3. Bottom of the funnel**
+
+Drop offs in the bottom of the funnel, similar to paid search traffic are high for both direct traffic (50.61%) and organic search traffic (50.15%).
 
 
 # Recommendations 
 
 **1. Checkout Optimization by Device (Bottom of Funnel)**
    
-Checkout attrition is significantly higher on mobile devices compared to desktop across both brand and non-brand traffic, indicating that device-specific friction is a key contributor to bottom-of-funnel loss.This is the **high priority stage for optimisation** because of the fact that users coming to this stage have the **higgest likelihood of making a purchase**. 
+Checkout attrition is significantly higher in both brand and non-brand traffic.This is the **high priority stage for optimisation** because of the fact that users coming to this stage have the **higgest likelihood of making a purchase**. 
 
 **Estimated Impact**
 
@@ -402,7 +418,7 @@ Based on observed brand campaign revenue of ~ $156 K and nonbrand campaign reven
 
 **2. Product Page Optimization (Mid Funnel)**
 
-Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve brand stickyness which could lead to improvements in organic search and direct traffic as well.
+Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve brand stickiness which could lead to improvements in organic search and direct traffic as well.
 
 **3. Landing Page Optimization (Top of Funnel)**
 
@@ -410,18 +426,20 @@ Analysis indicates substantial top-of-funnel drop-off across channels, suggestin
 
 This highlights the need to optimize landing pages to more effectively surface products, align messaging with user intent, and reduce early-stage friction. Improvements in content hierarchy, load performance, and clarity of value proposition could help increase progression into the product exploration stage.
 
-**4. Introduction of site level campaigns such as loyalty programs to improve brand stickyness**
+**4. Introduction of site level campaigns such as loyalty programs to improve brand stickiness**
 
-Conversion rates across channels are comparable. Since 81% of the traffic is driven by paid searches, improving brand stickyness for this segment could lead to this segment converting to organic searches or direct traffic which would prove to be cost efficient. 
+Conversion rates across channels are comparable. Since 81% of the traffic is driven by paid searches, improving brand stickiness for this segment could lead to this segment converting to organic searches or direct traffic which would prove to be cost efficient. 
 
 
 # Assumptions and Caveats 
 
 1. Impact estimates are based on conservative industry benchmarks and assume constant traffic volume, stable average order value, and improvement at a single funnel stage; results are directional and reflect associations observed in session-level data rather than causal effects.
 
-2. Funnel analysis is performed at an aggregate level; performance differences across individual landing page, product page, and checkout variants are not explicitly analyzed.
+2. Marketing spends are not known and are assumed to be higher in some areas and  lower across others. 
 
-3. Product-level performance differences are not isolated and may contribute to observed funnel behavior.
+3. Funnel analysis is performed at an aggregate level; performance differences across individual landing page, product page, and checkout variants are not explicitly analyzed.
+
+4. Product-level performance differences are not isolated and may contribute to observed funnel behavior.
 
 
 # Appendix Summary
