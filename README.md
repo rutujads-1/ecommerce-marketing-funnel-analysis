@@ -166,13 +166,13 @@ Harnessing traffic through paid search and paid social search comes with a signi
 **Order Volume By Channel**
 
 <p align="center">
-  <img src="images/channle_perf_cvr.png" alt="CVR by channel" width="650">
+  <img src="images/channel_perf_ov.png" alt="CVR by channel" width="650">
 </p>
 
 <br>
 <br
   
-Across all the 4 product categories, paid search channel drives the highest order volume over the three year period which is nearly 80% of the total orders. 
+Across all the 3 years, paid search channel drives the highest order volume which is nearly 80% of the total orders. 
 
 **Conversion Rate By Channel**
 
