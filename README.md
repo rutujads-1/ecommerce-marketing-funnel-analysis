@@ -191,8 +191,6 @@ Conversion rates across channels have increased over time, with organic search a
 
 **Gross Revenue By Channel**
 
-<br>
-<br>
 
 <p align="center">
   <img src="images/gross_revenue_channel_perf.png" alt="Gross Rev by Channel" width="650">
@@ -230,7 +228,6 @@ This section analyses differences in brand awareness, user intent, and conversio
 
 **Traffic and Order Volume**
 
-<br>
 
 <p align="center">
   
@@ -249,8 +246,6 @@ In my view, this distribution suggests that a large proportion of demand is capt
 
 **Conversion Efficiency**
 
-<br>
-<br>
 
 <p align="center">
   <img src="images/campaign_perf_cvr.png" alt="CVR by campaign" width="500">
@@ -306,8 +301,8 @@ The objective of this analysis is to determine which stages of the purchase funn
 
 
 <div align="center">
-  <img src="images/NB campaign funnel.png" width="45%",style="display:inline-block;" />
   <img src="images/Brand Campaign Funnel.png" width="45%" ,style="display:inline-block;"/>
+  <img src="images/NB campaign funnel.png" width="45%",style="display:inline-block;" />
 </div>
 
 
