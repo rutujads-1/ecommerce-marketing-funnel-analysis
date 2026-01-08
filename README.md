@@ -230,14 +230,16 @@ This section analyses differences in brand awareness, user intent, and conversio
 
 **Traffic and Order Volume**
 
-<br><br>
+<br>
 
-<div align="center">
-  <img src="images/campaign_perf_traffic.png" width="45%" />
-  <img src="images/campaign_perf_orders.png" width="45%" />
-</div>
+<p align="center">
+  
+  <img src="images/campaign_perf_vol_traffic.png" alt="RPS by Channel" width="650">
+  
+</p>
 
-<br><br>
+<br>
+
 
 
 Nonbrand campaign consistently dominate paid search traffic, contributing **approximately 90% of paid search sessions** between 2012 and 2014. This higher traffic volume translated into a greater number of orders relative to brand campaigns throughout the period, positioning **nonband as the primary driver of scale** within paid search.
@@ -265,6 +267,11 @@ Although ~ 90% paid search traffic comes from nonbrand campaign, the conversion 
 Further breakdown of campaign performance indicates that device type and ad content contribute meaningfully to observed differences in sessions, conversion and order volume.
 
 
+**Device Type**
+
+Across nonbrand and brand campaigns, **desktop** brings in more traffic than **mobile**. Almost **72%** of nonbrand campaign traffic and **65%** of brand campaign traffic comes from desktop which suggest that device experience plays a role in overall campaign efficiency.
+
+
 
 <p align="center">
   <img src="images/campaign_perf_drivers.png" alt="drivers by campaign" width="500">
@@ -273,12 +280,9 @@ Further breakdown of campaign performance indicates that device type and ad cont
 <br>
 <br>
 
-**Device Type**
-
-Across nonbrand and brand campaigns, **desktop** brings in more traffic than **mobile**. Almost **72%** of nonbrand campaign traffic and **65%** of brand campaign traffic comes from desktop which suggest that device experience plays a role in overall campaign efficiency.
-
-
 **Ad Content (UTM Content)**
+
+Two different variations of Google and Bing ads are used across nonbrand and brand campaigns.**b_ad_1 and g_ad_1** are used in **nonbrand** campaigns while **b_ad_2 and g_ad_2** are used in **brand** campaigns. 
 
 Comparison of **Google and Bing ad** variations within both brand and nonbrand campaigns shows that both variations achieved comparable conversion rates but google ads drove significantly higher session and traffic volumes. Since google ads drive more traffic to the wesbite which leads to orders with comparable conversion rates to bing ads, ad spend in bing ads should be re-evaluated. 
 
