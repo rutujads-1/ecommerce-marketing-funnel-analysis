@@ -391,7 +391,7 @@ These findings indicate that mid-funnel optimization—particularly improving ad
 
 **1. Checkout Optimization by Device (Bottom of Funnel)**
    
-Checkout attrition is significantly higher on mobile devices compared to desktop across both brand and non-brand traffic, indicating that device-specific friction is a key contributor to bottom-of-funnel loss. Given that this is the easiest stage optimise because of the fact that users coming to this stage have the higgest likelihood of making a purchase optimization efforts should prioritize the imporvement of checkout experience first.
+Checkout attrition is significantly higher on mobile devices compared to desktop across both brand and non-brand traffic, indicating that device-specific friction is a key contributor to bottom-of-funnel loss.This is the **high priority stage for optimisation** because of the fact that users coming to this stage have the **higgest likelihood of making a purchase**. 
 
 **Estimated Impact**
 
@@ -402,7 +402,7 @@ Based on observed brand campaign revenue of ~ $156 K and nonbrand campaign reven
 
 **2. Product Page Optimization (Mid Funnel)**
 
-Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve stickyness which could lead to improvements in organic search and direct traffic as well.
+Persistent mid-funnel attrition at the add-to-cart stage, including among repeat and brand-aware users, indicates that product detail pages are a critical bottleneck in the purchase journey. Improving the product detail pages is likely to improve brand stickyness which could lead to improvements in organic search and direct traffic as well.
 
 **3. Landing Page Optimization (Top of Funnel)**
 
@@ -426,7 +426,7 @@ Conversion rates across channels are comparable. Since 81% of the traffic is dri
 
 # Appendix Summary
 
- Link to Impact Estimation working: (https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/Impact%20Estimation-%20add%20to%20cart%20rate%20improvent%20of%20brand%20funnel.xlsx)
+ Link to Impact Estimation working: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/Estimation%20%26%20Impact.xlsx
  
 
 
