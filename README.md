@@ -50,7 +50,7 @@ Insights and recommendations are developed in the following areas-
 
 link for dashboard:
 
-link for sql query: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_queries_maincodefile_ecommerce_marketing.sql
+link for sql analysis: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_analysis_maincodefile_ecommerece_marketing.sql
 
 
 
