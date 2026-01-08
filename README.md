@@ -357,10 +357,9 @@ To evaluate whether organic search and direct traffic can be scaled without comp
 
 
 <div align="center">
-  <img src="images/Direct Channel Funnel.png" width="45%",style="display:inline-block;" />
-  <img src="images/Organic Channel Funnel.png" width="45%" ,style="display:inline-block;"/>
+  <img src="images/Direct Channel Funnel.png" width="45%" />
+  <img src="images/Organic Channel Funnel.png" width="45%" />
 </div>
-
 
 <br>
 <br>
