@@ -125,7 +125,7 @@ link for sql queries used to create views: https://github.com/rutujads-1/ecommer
 <br>
 
 <div align="center">
-  <img src="images/exec_traffic_dist.png" width="50%" />
+  <img src="images/exec_traffic_dist.png" width="40%" />
   
 </div>
 
