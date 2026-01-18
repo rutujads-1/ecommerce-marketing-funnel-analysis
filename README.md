@@ -17,9 +17,9 @@ Analyzed e-commerce marketing performance using session-level data to evaluate c
 
 - [Recommendations](#recommendations)
 
-- [Assumptions and Caveats](assumptions-and-caveats)
+- [Assumptions and Caveats](#assumptions-and-caveats)
 
-- [Appendix Summary](appendix-summary) 
+- [Appendix Summary](#appendix-summary) 
 
 
 
