@@ -48,7 +48,7 @@ Insights and recommendations are developed in the following areas-
 **5. Unpaid Search Channel Funnel Health(organic search and direct traffic):** evaluates funnel performance for organic search and direct raffic channels by analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
 
 
-link for dashboard:
+link for dashboard: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/ToySore_Ecommerce_DB_Dashboard.pbix
 
 link for sql analysis: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/SQL_analysis_maincodefile_ecommerece_marketing.sql
 
