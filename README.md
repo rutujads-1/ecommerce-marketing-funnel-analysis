@@ -394,7 +394,7 @@ Checkout attrition is significantly higher in both brand and nonbrand traffic.Th
 
 Applying a conservative benchmark-based scenario-**improving bottom-funnel- specific- shipping to conversion rate in brand campaign traffic funnel from 68.2% to 80% and in nonbrand campaign traffic funnel from 67.8% to 80%** while holding traffic and average order value constant- suggests a potential **17.3% increase in brand campaign** revenue and **17.9% increase in nonbrand campaign revenue**.
 
-Based on observed brand campaign revenue of ~ $156 K and nonbrand campaign revenue of ~ 1.12M  over the analysis period, this represents an estimated **$32K in incremental revenue in brand campaign** and **~238K in incremental revenue in nonbrand campaign** without additional acquisition spend.
+Based on observed brand campaign revenue of ~ $156 K and nonbrand campaign revenue of ~ $1.12M  over the analysis period, this represents an estimated **$32K in incremental revenue in brand campaign** and **~$238K in incremental revenue in nonbrand campaign** without additional acquisition spend.
 
 
 **2. Landing Page Optimization (Top of Funnel)**
