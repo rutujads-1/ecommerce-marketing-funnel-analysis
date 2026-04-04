@@ -72,9 +72,9 @@ Fuzzy Factory's database structure as seen below consists of 6 tables-
 
 4. `products`- Contains 4 records with each row being a unique product_id along with the name and launch date.
 
-5. `website_sessions`- Contains 4.7M records where each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
+5. `website_sessions`- Contains 470K records where each row represents a unique website_session_id, when the session was created, where the session came from and the marketing parameters tracked for the same.
 
-6. `website_pageviews`- Contains 5.2M records each row represents a unique pageview_id representing the different pageview across a wesbite session. 
+6. `website_pageviews`- Contains 1M records each row represents a unique pageview_id representing the different pageview across a wesbite session. 
 
 <br>
 <br>
