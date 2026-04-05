@@ -64,11 +64,11 @@ link for sql analysis: https://github.com/rutujads-1/ecommerce-marketing-funnel-
 
 Fuzzy Factory's database structure as seen below consists of 6 tables-
 
-1. `orders`-  Contains 280K records where each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
+1. `orders`-  Contains 32K records where each row corresponds to a unique order_id, when the order was placed and which session it came from and the details about the items purchases like the prices. 
 
-2. `order_items` -Contains 320K records where each row corresponds to a unique order_items_id which give details about the contents of orders. 
+2. `order_items` -Contains 40K records where each row corresponds to a unique order_items_id which give details about the contents of orders. 
 
-3. `order_item_refunds`- Contains ~9K records where each row corresponds to a refund for an order.
+3. `order_item_refunds`- Contains ~1K records where each row corresponds to a refund for an order.
 
 4. `products`- Contains 4 records with each row being a unique product_id along with the name and launch date.
 
