@@ -45,7 +45,7 @@ Insights and recommendations are developed in the following areas-
 
 **4. Paid Search Channel Funnel Health (brand campaign vs nonbrand campaign):** Evaluates the performance of paid search channel by comparing brand and nonbrand campaign traffic through the conversion funnel using *conversion rates,conversion rate gap (percentage points) ,funnel entry rates and stage-level drop-offs and checkout completion rates*.
 
-**5. Unpaid Search Channel Funnel Health(organic search and direct traffic):** evaluates funnel performance for organic search and direct raffic channels by analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
+**5. Unpaid Search Channel Funnel Health(organic search and direct traffic):** evaluates funnel performance for organic search and direct traffic channels by analysing  funnel behavior using *funnel conversion rates, conversion rate gap (percentage points),stage-level funnel drop-off percentages and checkout completion rates*.
 
 
 link for dashboard: https://github.com/rutujads-1/ecommerce-marketing-funnel-analysis/blob/main/ToySore_Ecommerce_DB_Dashboard.pbix
